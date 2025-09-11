@@ -1,274 +1,299 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumyx - Détailing Automobile à Domicile</title>
-    <link rel="icon" type="image/png" href="https://files.catbox.moe/ucvv74.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            background-image: linear-gradient(135deg, #0f172a 0%, #1a2035 100%);
-        }
-        .nav-link {
-            transition: color 0.3s, transform 0.3s;
-        }
-        .nav-link:hover {
-            color: #c7d2fe;
-            transform: translateY(-2px);
-        }
-        .price-card img {
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .price-card:hover img {
-            transform: scale(1.05);
-        }
-        .hero-button {
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
-        }
-        .hero-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-        }
-        .section-heading {
-            position: relative;
-            display: inline-block;
-        }
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 4px;
-            background-color: #6366f1;
-            bottom: -10px;
-            left: 10%;
-            border-radius: 9999px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumyx - Détailing Automobile à Domicile</title>
+    <link rel="icon" type="image/png" href="https://files.catbox.moe/ucvv74.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            background-image: linear-gradient(135deg, #0f172a 0%, #1a2035 100%);
+        }
+        .nav-link {
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-link:hover {
+            color: #c7d2fe;
+            transform: translateY(-2px);
+        }
+        .price-card img {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .price-card:hover img {
+            transform: scale(1.05);
+        }
+        .hero-button {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+        }
+        .hero-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 4px;
+            background-color: #6366f1;
+            bottom: -10px;
+            left: 10%;
+            border-radius: 9999px;
+        }
+    </style>
 </head>
 <body class="bg-gray-900">
 
-    <!-- Navbar -->
-    <nav class="bg-gray-800 shadow-xl sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <a href="index.html" class="h-16">
-                <img src="assets/logo.png" alt="Lumyx Logo" class="h-full w-auto">
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#services" class="nav-link text-gray-300 hover:text-indigo-400">Services & Tarifs</a>
-                <a href="#portfolio" class="nav-link text-gray-300 hover:text-indigo-400">Portfolio</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-indigo-400">Prendre rendez-vous</a>
-            </div>
-            <button id="menu-button" class="md:hidden text-gray-400 focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <a href="#services" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Services & Tarifs</a>
-            <a href="#portfolio" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Portfolio</a>
-            <a href="#contact" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Prendre rendez-vous</a>
-        </div>
-    </nav>
+        <nav class="bg-gray-800 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="h-16">
+                <img src="assets/logo.png" alt="Lumyx Logo" class="h-full w-auto">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="nav-link text-gray-300 hover:text-indigo-400">À Propos</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-indigo-400">Services & Tarifs</a>
+                <a href="#portfolio" class="nav-link text-gray-300 hover:text-indigo-400">Portfolio</a>
+                <a href="#testimonials" class="nav-link text-gray-300 hover:text-indigo-400">Témoignages</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-indigo-400">Prendre rendez-vous</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-gray-400 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#about" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">À Propos</a>
+            <a href="#services" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Services & Tarifs</a>
+            <a href="#portfolio" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Portfolio</a>
+            <a href="#testimonials" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Témoignages</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-200 hover:bg-gray-700">Prendre rendez-vous</a>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
-    <header id="hero" class="bg-gray-900 text-white py-32 px-6 text-center shadow-lg">
-        <div class="container mx-auto">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-wide">Lumyx - Le Detailing à Domicile</h1>
-            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90">Offrez à votre voiture le luxe d'un soin professionnel, directement chez vous en Seine-et-Marne.</p>
-            <a href="#contact" class="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hero-button hover:bg-indigo-700">
-                Prendre rendez-vous
-            </a>
-        </div>
-    </header>
+        <header id="hero" class="bg-gray-900 text-white py-32 px-6 text-center shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-wide">Lumyx - Le Detailing à Domicile</h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90">Offrez à votre voiture le luxe d'un soin professionnel, directement chez vous en Seine-et-Marne.</p>
+            <a href="#contact" class="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hero-button hover:bg-indigo-700">
+                Prendre rendez-vous
+            </a>
+        </div>
+    </header>
 
-    <!-- Detailing Details Section -->
-    <section id="details" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 section-heading">L'art du Detailing Intérieur</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-                <!-- Card 1: Aspiration -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="assets/siege.jpg" alt="Aspiration et Nettoyage" class="w-full h-auto object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold text-white mb-2">Aspiration et Nettoyage en Profondeur</h3>
-                    <p class="text-gray-400">Aspiration minutieuse de l'habitacle et nettoyage en profondeur de chaque surface, tapis, sièges et moquettes.</p>
+    <section id="about" class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-16 section-heading">L'Histoire de Lumyx</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2">
+                    <img src="assets/about.jpg" alt="Image de l'entreprise Lumyx" class="rounded-xl shadow-lg w-full">
                 </div>
-                <!-- Card 2: Nettoyage et Entretien -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="assets/cuir.jpg" alt="Cuir" class="w-full h-auto object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold text-white mb-2">Nettoyage des Plastiques et Cuirs</h3>
-                    <p class="text-gray-400">Nettoyage et entretien des plastiques, cuirs et autres surfaces de l'habitacle pour un rendu impeccable.</p>
-                </div>
-                <!-- Card 3: Désinfection -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                    <img src="assets/volant.jpg" alt="Désinfection" class="w-full h-auto object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold text-white mb-2">Désinfection et Protection</h3>
-                    <p class="text-gray-400">Désinfection des surfaces et application de produits de protection pour un intérieur propre et sain.</p>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+                        Passionné d'automobile depuis toujours, j'ai créé Lumyx pour vous offrir un service de detailing d'excellence, directement chez vous. Je crois qu'il n'est pas nécessaire de se déplacer pour que votre véhicule bénéficie des meilleurs soins.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Avec une attention méticuleuse au détail, des produits professionnels de haute qualité et une approche personnalisée, mon objectif est de redonner à votre voiture son éclat d'origine, en respectant chaque surface et en la protégeant durablement.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services & Pricing Section -->
-    <section id="services" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 section-heading">Nos Services & Tarifs</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-                <!-- Pricing Video 1 -->
-                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
-                    <img class="w-full h-auto object-cover" src="assets/1.png" alt="Nettoyage intérieur">
+        <section id="details" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 section-heading">L'art du Detailing Intérieur</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/siege.jpg" alt="Aspiration et Nettoyage" class="w-full h-auto object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Aspiration et Nettoyage en Profondeur</h3>
+                    <p class="text-gray-400">Aspiration minutieuse de l'habitacle et nettoyage en profondeur de chaque surface, tapis, sièges et moquettes.</p>
+                </div>
+                                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/cuir.jpg" alt="Cuir" class="w-full h-auto object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Nettoyage des Plastiques et Cuirs</h3>
+                    <p class="text-gray-400">Nettoyage et entretien des plastiques, cuirs et autres surfaces de l'habitacle pour un rendu impeccable.</p>
+                </div>
+                                <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/volant.jpg" alt="Désinfection" class="w-full h-auto object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Désinfection et Protection</h3>
+                    <p class="text-gray-400">Désinfection des surfaces et application de produits de protection pour un intérieur propre et sain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="services" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 section-heading">Nos Services & Tarifs</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+                                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="assets/1.png" alt="Nettoyage intérieur">
+                </div>
+                                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="assets/2.png" alt="Lavage extérieur">
+                </div>
+                                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="assets/3.png" alt="Cire et protection">
+                </div>
+                                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="assets/4.png" alt="Détail du moteur">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="portfolio" class="bg-gray-800 py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 section-heading">Notre Portfolio</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
+                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
+                        <source src="https://files.catbox.moe/esocri.mov" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
+                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
+                        <source src="https://files.catbox.moe/1m4got.mov" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
+                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
+                        <source src="https://files.catbox.moe/ddt6dt.mov" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
+                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
+                        <source src="https://files.catbox.moe/lr5i11.mov" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                </div>
+                            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 px-6 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-16 section-heading">Témoignages Clients</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <p class="italic text-gray-300">"Service impeccable et très professionnel ! Ma voiture n'a jamais été aussi propre. C'est un vrai plaisir de rouler avec. Je recommande à 100%."</p>
+                    <div class="mt-4 text-right font-semibold text-gray-400">
+                        <p>- Marc D., Melun</p>
+                    </div>
                 </div>
-                <!-- Pricing Video 2 -->
-                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
-                    <img class="w-full h-auto object-cover" src="assets/2.png" alt="Lavage extérieur">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <p class="italic text-gray-300">"Très content de la prestation à domicile. C'est incroyablement pratique et le résultat est juste fantastique. Merci Lumyx !"</p>
+                    <div class="mt-4 text-right font-semibold text-gray-400">
+                        <p>- Sarah L., Fontainebleau</p>
+                    </div>
                 </div>
-                <!-- Pricing Video 3 -->
-                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
-                    <img class="w-full h-auto object-cover" src="assets/3.png" alt="Cire et protection">
                 </div>
-                <!-- Pricing Video 4 -->
-                <div class="price-card w-full max-w-sm rounded-xl overflow-hidden">
-                    <img class="w-full h-auto object-cover" src="assets/4.png" alt="Détail du moteur">
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-gray-800 py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 section-heading">Notre Portfolio</h2>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Portfolio Video 1 -->
-                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
-                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
-                        <source src="https://files.catbox.moe/esocri.mov" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-                <!-- Portfolio Video 2 -->
-                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
-                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
-                        <source src="https://files.catbox.moe/1m4got.mov" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-                <!-- Portfolio Video 3 -->
-                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
-                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
-                        <source src="https://files.catbox.moe/ddt6dt.mov" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-                <!-- Portfolio Video 4 -->
-                <div class="bg-gray-900 p-2 rounded-xl shadow-lg">
-                    <video class="rounded-lg w-full h-auto" autoplay loop muted playsinline>
-                        <source src="https://files.catbox.moe/lr5i11.mov" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-                <!-- Add more videos as needed -->
-            </div>
-        </div>
-    </section>
+        <section id="contact" class="py-20 px-6">
+        <div class="container mx-auto max-w-2xl bg-gray-800 p-10 rounded-xl shadow-xl">
+            <h2 class="text-4xl font-bold text-center mb-12 section-heading">Prendre rendez-vous</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-xl mx-auto opacity-80">
+                Situé en Seine-et-Marne, je me déplace directement chez vous pour un service de qualité.
+                Remplissez le formulaire ci-dessous et je vous recontacterai pour confirmer le rendez-vous.
+            </p>
+                        <form
+                action="https://formspree.io/f/xblapepz"
+                method="POST"
+                class="space-y-6"
+            >
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-400">Nom complet</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-400">Numéro de téléphone</label>
+                    <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-400">Adresse de rendez-vous</label>
+                    <input type="text" id="address" name="address" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-400">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-400">Message (décrivez votre véhicule et le service souhaité)</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full sm:w-auto bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hero-button hover:bg-indigo-700">
+                        Envoyer ma demande
+                    </button>
+                </div>
+            </form>
+            <div id="status-message" class="mt-4 text-center hidden"></div>
+        </div>
+    </section>
 
-    <!-- Contact & Booking Section -->
-    <section id="contact" class="py-20 px-6">
-        <div class="container mx-auto max-w-2xl bg-gray-800 p-10 rounded-xl shadow-xl">
-            <h2 class="text-4xl font-bold text-center mb-12 section-heading">Prendre rendez-vous</h2>
-            <p class="text-center text-gray-300 mb-8 max-w-xl mx-auto opacity-80">
-                Situé en Seine-et-Marne, je me déplace directement chez vous pour un service de qualité.
-                Remplissez le formulaire ci-dessous et je vous recontacterai pour confirmer le rendez-vous.
-            </p>
-            <!-- Le formulaire est géré par Formspree en tant qu'action de formulaire -->
-            <form
-                action="https://formspree.io/f/xblapepz"
-                method="POST"
-                class="space-y-6"
-            >
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-400">Nom complet</label>
-                    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                </div>
-                <div>
-                    <label for="phone" class="block text-sm font-medium text-gray-400">Numéro de téléphone</label>
-                    <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                </div>
-                <!-- New address field -->
-                <div>
-                    <label for="address" class="block text-sm font-medium text-gray-400">Adresse de rendez-vous</label>
-                    <input type="text" id="address" name="address" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-400">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-400">Message (décrivez votre véhicule et le service souhaité)</label>
-                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 text-gray-200 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="w-full sm:w-auto bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hero-button hover:bg-indigo-700">
-                        Envoyer ma demande
-                    </button>
-                </div>
-            </form>
-            <div id="status-message" class="mt-4 text-center hidden"></div>
-        </div>
-    </section>
+        <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Lumyx. Tous droits réservés.</p>
+            <p class="mt-2 text-sm opacity-70">Service de detailing automobile à domicile en Seine-et-Marne.</p>
+            <div class="mt-4">
+                <a href="politique-confidentialite.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2025 Lumyx. Tous droits réservés.</p>
-            <p class="mt-2 text-sm opacity-70">Service de detailing automobile à domicile en Seine-et-Marne.</p>
-            <div class="mt-4">
-                <a href="politique-confidentialite.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Politique de Confidentialité</a>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-            // Toggle mobile menu
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            // Toggle mobile menu
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-            // Smooth scroll for navigation links
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
 
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('nav').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                        // Optionally close the mobile menu after clicking a link
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Optionally close the mobile menu after clicking a link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
