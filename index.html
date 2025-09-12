@@ -93,18 +93,18 @@
     <section id="histoire" class="py-20 px-6 bg-gray-800">
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16 section-heading">Notre Histoire</h2>
-            <!-- 
-            En ajoutant min-h-[500px] et en rendant les enfants
-            flexibles (h-full), nous forçons l'image et le texte à
-            avoir la même hauteur. L'image sera recadrée pour s'adapter,
-            comme demandé.
-            -->
-            <div class="flex flex-col md:flex-row justify-center md:space-x-12 items-center min-h-[500px]">
-                <div class="md:w-1/2 mb-8 md:mb-0 h-full">
+            <!-- Le conteneur Flexbox utilise maintenant `items-stretch` (la valeur par défaut),
+            ce qui permet aux deux colonnes de s'étirer à la même hauteur. -->
+            <div class="flex flex-col md:flex-row justify-center md:space-x-12 items-stretch">
+                <!-- Le conteneur de l'image -->
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- L'image elle-même a `h-full` et `object-cover` pour remplir son
+                    conteneur en se recadrant si nécessaire. -->
                     <img src="assets/voiture.jpg" alt="Image illustrant la passion pour l'automobile" class="rounded-xl shadow-xl w-full h-full object-cover">
                 </div>
+                <!-- Le conteneur du texte -->
                 <div class="md:w-1/2 h-full flex flex-col justify-center">
-                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg">
+                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg h-full">
                         <h3 class="text-2xl font-semibold text-white mb-4">Une passion de toujours</h3>
                         <p class="text-gray-300 mb-6 leading-relaxed">
                             Depuis mon plus jeune âge, ma passion pour l'automobile a toujours été inséparable de mon goût pour le détail et la propreté. J'ai toujours considéré une voiture non pas comme un simple moyen de transport, mais comme une œuvre d'art nécessitant un soin particulier.
@@ -320,6 +320,7 @@
                     statusMessage.textContent = 'La connexion a échoué. Veuillez vérifier votre réseau.';
                     statusMessage.classList.remove('text-gray-400', 'text-green-400');
                     statusMessage.classList.add('text-red-400');
+                    console.error('Erreur de formulaire:', error);
                 } finally {
                     statusMessage.classList.remove('hidden');
                 }
