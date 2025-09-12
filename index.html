@@ -93,12 +93,17 @@
     <section id="histoire" class="py-20 px-6 bg-gray-800">
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16 section-heading">Notre Histoire</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
+            <!--
+            J'ai retiré 'items-center' pour permettre aux deux blocs de s'étirer
+            et d'avoir la même hauteur. J'ai ajouté 'h-full' à l'image
+            pour qu'elle remplisse l'espace vertical disponible.
+            -->
+            <div class="flex flex-col md:flex-row justify-center md:space-x-12">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="assets/voiture.jpg" alt="Image illustrant la passion pour l'automobile" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    <img src="assets/voiture.jpg" alt="Image illustrant la passion pour l'automobile" class="rounded-xl shadow-xl w-full h-auto object-cover md:h-full">
                 </div>
                 <div class="md:w-1/2">
-                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg">
+                    <div class="bg-gray-700 p-8 rounded-xl shadow-lg h-full">
                         <h3 class="text-2xl font-semibold text-white mb-4">Une passion de toujours</h3>
                         <p class="text-gray-300 mb-6 leading-relaxed">
                             Depuis mon plus jeune âge, ma passion pour l'automobile a toujours été inséparable de mon goût pour le détail et la propreté. J'ai toujours considéré une voiture non pas comme un simple moyen de transport, mais comme une œuvre d'art nécessitant un soin particulier.
